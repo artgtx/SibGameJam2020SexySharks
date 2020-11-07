@@ -16,8 +16,8 @@ public class TurelRotation : MonoBehaviour
 
     void RotateTurel()
     {
-        rotationAngle += Input.GetAxis("Mouse X") * rotationSpeed * -Time.deltaTime;
-        rotationAngle = Mathf.Clamp(rotationAngle, 0, 180);
+        rotationAngle += Input.GetAxis("Mouse X") * rotationSpeed * Time.deltaTime;
+        rotationAngle = Mathf.Clamp(rotationAngle, -30, 30);
         turel.localRotation = Quaternion.AngleAxis(rotationAngle, Vector3.up);
     }
 }
