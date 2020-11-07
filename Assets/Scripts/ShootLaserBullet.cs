@@ -20,6 +20,7 @@ public class ShootLaserBullet : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Instantiate(laserPrefab, transform.position, laserPrefab.transform.rotation);
+            laserPrefab.GetComponent<LaserBullet>();
         }
     }
 }
