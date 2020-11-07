@@ -18,5 +18,13 @@ public class PlasmaBullet : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector3.down * speed * Time.deltaTime);
+
+        Destroy(gameObject, 10);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Destroy(collision.gameObject);
+        Destroy(gameObject);
     }
 }
