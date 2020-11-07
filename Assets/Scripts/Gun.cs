@@ -26,7 +26,10 @@ public class Gun : MonoBehaviour {
                 Bullets -= 1;
                 
                 GameObject newBullet = Instantiate(BulletPrefab, Spawn.transform.position, Spawn.transform.rotation);
-                newBullet.GetComponent<Rigidbody>().velocity = Spawn.transform.forward * 20;
+                newBullet.GetComponent<Rigidbody>().velocity = Spawn.transform.forward * 500;
+
+
+               
             }
         
         }

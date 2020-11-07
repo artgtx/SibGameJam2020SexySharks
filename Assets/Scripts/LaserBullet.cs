@@ -11,7 +11,7 @@ public class LaserBullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        //collision = GameObject.FindGameObjectWithTag("Enemy");
     }
 
     // Update is called once per frame
@@ -24,7 +24,11 @@ public class LaserBullet : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Destroy(collision.gameObject);
-        Destroy(gameObject);
+        if (collision.gameObject.tag == "Enemy")
+        {
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+        }
+           
     }
 }
