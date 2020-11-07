@@ -21,6 +21,7 @@ public class ShootLaserBullet : MonoBehaviour
         {
             Instantiate(laserPrefab, transform.position, laserPrefab.transform.rotation);
             laserPrefab.GetComponent<LaserBullet>();
+            Destroy(gameObject);
         }
     }
 }

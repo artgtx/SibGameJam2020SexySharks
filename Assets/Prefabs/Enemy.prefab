@@ -172,7 +172,7 @@ MonoBehaviour:
   Radius: 100
   BodyParts: []
   ThisnavMeshAgent: {fileID: 3246575556900679038}
-  Health: 2
+  Health: 10
 --- !u!114 &1282369673
 MonoBehaviour:
   m_ObjectHideFlags: 0
