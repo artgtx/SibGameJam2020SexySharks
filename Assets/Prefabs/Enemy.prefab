@@ -149,6 +149,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 899274aa15569f94aae868904ec6e54e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 3326237294522816169, guid: f2ef6eb0ddb204c948e07beafbeaad0f, type: 3}
+  player: {fileID: 919132149155446097, guid: 1d25a158801f84b2e843ffaf2ab838ec, type: 3}
   dist: 0
-  Radius: 20
+  Radius: 1000
