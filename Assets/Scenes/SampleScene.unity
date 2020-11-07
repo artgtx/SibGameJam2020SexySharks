@@ -340,8 +340,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  bulletPrefab: {fileID: 8941229945720157774, guid: 5f98d65980cff4db983245f1256ff876,
+  plasmaPrefab: {fileID: 8941229945720157774, guid: a30fe047434ba42b3930352e52b79ef9,
     type: 3}
+  laserPrefab: {fileID: 8941229945720157774, guid: 5f98d65980cff4db983245f1256ff876,
+    type: 3}
+  health: 5
 --- !u!135 &84868339
 SphereCollider:
   m_ObjectHideFlags: 0

@@ -6,7 +6,8 @@ public class PlayerController : MonoBehaviour
 {
     public float speed;
     private float horizontalInput;
-    public GameObject bulletPrefab;
+    public GameObject plasmaPrefab;
+    public GameObject laserPrefab;
     public int health = 5;
     
 
@@ -21,11 +22,21 @@ public class PlayerController : MonoBehaviour
     {
         horizontalInput = Input.GetAxis("Horizontal");
 
-        transform.Translate(Vector3.left * speed * horizontalInput);
-
-        if (Input.GetKeyDown(KeyCode.Space))
+        if(transform.position.x < 13 && transform.position.x > -13)
         {
-            Instantiate(bulletPrefab, transform.position, bulletPrefab.transform.rotation);
+            transform.Translate(Vector3.left * speed * horizontalInput);
+        }
+
+        
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            Instantiate(laserPrefab, transform.position, laserPrefab.transform.rotation);
+        }
+        if (Input.GetMouseButtonDown(1))
+        {
+            Instantiate(plasmaPrefab, transform.position, plasmaPrefab.transform.rotation);
         }
     }
 }
+

@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 7122877003197832886}
   - component: {fileID: 1619259568644605711}
   - component: {fileID: 3645374515781308996}
-  - component: {fileID: -2857118459750263600}
+  - component: {fileID: 3668816005733735370}
   m_Layer: 0
-  m_Name: Bullet
+  m_Name: PlasmaBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8941229945720157774}
   m_LocalRotation: {x: 0.49999988, y: 0.5000001, z: 0.5000002, w: 0.49999985}
-  m_LocalPosition: {x: 2.65, y: -0.58, z: 13.800001}
+  m_LocalPosition: {x: 2.65, y: -0.58, z: 13.69}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children: []
   m_Father: {fileID: 0}
@@ -95,7 +95,7 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-2857118459750263600
+--- !u!114 &3668816005733735370
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -104,6 +104,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8941229945720157774}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fb491987074b4d13953ea2d2049e894, type: 3}
+  m_Script: {fileID: 11500000, guid: 78d06d2602087426683e53836a5b6c28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 4

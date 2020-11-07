@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class PlasmaBullet : MonoBehaviour
 {
-    private float speed = 5;
+    public float speed = 4;
+    public float damage = 3;
+    public float energyCost = 2;
 
     // Start is called before the first frame update
     void Start()
@@ -16,11 +18,5 @@ public class Bullet : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector3.down * speed * Time.deltaTime);
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        Destroy(other.gameObject);
-        Destroy(gameObject);
     }
 }
