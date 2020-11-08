@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 9006592031506758301}
   m_Layer: 0
   m_Name: Carrier
-  m_TagString: Untagged
+  m_TagString: Carrier
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -131,3 +131,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 9006592031506758302}
+  health: 5

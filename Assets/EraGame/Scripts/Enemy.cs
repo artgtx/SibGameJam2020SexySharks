@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour
     public BodyPart[] BodyParts;
     public NavMeshAgent ThisnavMeshAgent;
     public int Health;
+    public int damage = 10;
     //public Animator EnemyAnim;
 
     void Start()
