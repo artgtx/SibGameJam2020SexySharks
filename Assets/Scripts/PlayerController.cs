@@ -70,7 +70,7 @@ public class PlayerController : MonoBehaviour
     private void UpdateEnergy(float energy)
     {
 
-        energyText.text = "Energey: " + Mathf.Round(energy);
+        energyText.text = "Energy: " + Mathf.Round(energy);
     }
 }
 
