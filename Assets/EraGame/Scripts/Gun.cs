@@ -9,31 +9,44 @@ public class Gun : MonoBehaviour
     public int maxBullets;
     public float timer;
     public int Bullets;
+    public float laserDamage = 10;
+    public float plasmaDamage = 30;
+    public float energyCostLaser = 30;
+    public float energyCostPlasma = 90;
+    public float energyRemains;
+
+
     public GameObject Spawn;
     public GameObject Spawns;
     public GameObject BulletPrefab;
+
+
     void Start()
     {
         Debug.Log(maxBullets);
         Bullets = maxBullets;
 
-
+        
     }
 
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(1))
-        {
-            if (Bullets > 0 && Time.time - timer >= 0.2)
-            {
-                timer = Time.time;
-                Bullets -= 1;
+        energyRemains = GetComponent<PlayerController>().energyVault;
 
-                GameObject newBullet = Instantiate(BulletPrefab, Spawn.transform.position, Spawn.transform.rotation);
-                newBullet.GetComponent<Rigidbody>().velocity = Spawn.transform.forward * 300;
+        if (energyRemains > 100)
+        {
+            if (Input.GetMouseButtonDown(1))
+            {
+                if (Bullets > 0 && Time.time - timer >= 0.2)
+                {
+                    timer = Time.time;
+                    Bullets -= 1;
+
+                    GameObject newBullet = Instantiate(BulletPrefab, Spawn.transform.position, Spawn.transform.rotation);
+                    newBullet.GetComponent<Rigidbody>().velocity = Spawn.transform.forward * 300;
+                }
             }
-        }
 
             if (Input.GetMouseButtonDown(0))
             {
@@ -47,7 +60,9 @@ public class Gun : MonoBehaviour
                 }
             }
         }
+            
     }
+}
 
 
 

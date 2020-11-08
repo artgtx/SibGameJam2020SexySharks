@@ -54,4 +54,9 @@ public class Enemy : MonoBehaviour
         }
 
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+
+    }
 }

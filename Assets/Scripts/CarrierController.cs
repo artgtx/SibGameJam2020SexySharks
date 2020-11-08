@@ -11,6 +11,7 @@ public class CarrierController : MonoBehaviour
     public float health = 5;
     public float speed = 7;
     public float energyTaken;
+    private int enemiesTaken = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -42,14 +43,10 @@ public class CarrierController : MonoBehaviour
         {
             energyTaken = 0;
         }
-        energyTaken = 10;
+        energyTaken = 110 * enemiesTaken;
+        enemiesTaken++;
         Destroy(other.gameObject);
         Debug.Log(fallenEnemy);
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        energyTaken = 0;
     }
 
     public void TakeDamage(int damage)

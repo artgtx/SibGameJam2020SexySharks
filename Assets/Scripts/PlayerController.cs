@@ -8,14 +8,17 @@ public class PlayerController : MonoBehaviour
     private float horizontalInput;
 
     public int health = 5;
-    private float energyVault = 100;
+    public float energyVault = 1000;
     public float energyFromCarrier;
+    private float gunCostLaser;
+    private float gunCostPlasma;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        gunCostLaser = GetComponent<Gun>().energyCostLaser;
+        gunCostPlasma = GetComponent<Gun>().energyCostPlasma;
     }
 
     // Update is called once per frame
@@ -28,12 +31,22 @@ public class PlayerController : MonoBehaviour
 
         if(energyFromCarrier > 0)
         {
-            energyVault += energyFromCarrier;
-            energyFromCarrier = 0;
-            Debug.Log(energyVault);
+            energyVault = energyVault + (energyFromCarrier * Time.deltaTime);
 
+            Debug.Log(energyVault);
         }
-        
+        if(Input.GetMouseButton(0) && energyVault > 30)
+        {
+            Debug.Log("Before shot:" + energyVault);
+            energyVault -= gunCostLaser;
+            Debug.Log("After shot:" + energyVault);
+        }
+        if (Input.GetMouseButton(1) && energyVault > 90)
+        {
+            Debug.Log("Before shot:" + energyVault);
+            energyVault -= gunCostPlasma;
+            Debug.Log("After shot:" + energyVault);
+        }
     }
 }
 
