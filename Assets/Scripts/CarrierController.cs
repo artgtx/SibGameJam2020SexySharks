@@ -28,14 +28,17 @@ public class CarrierController : MonoBehaviour
 
     void GetEnemy()
     {
-        Vector3 fallenEnemyPos = fallenEnemy.transform.position;
+        if (fallenEnemy != null)
+        {
+            Vector3 fallenEnemyPos = fallenEnemy.transform.position;
 
-        if(fallenEnemy)
+        if (fallenEnemy)
         {
             agent.SetDestination(fallenEnemyPos);
 
         }
     }
+}
 
     private void OnTriggerEnter(Collider other)
     {
