@@ -5,19 +5,19 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    public AudioSource music;
-    public AudioSource effects;
+    [SerializeField]private AudioSource music;
+    [SerializeField]private AudioSource effects;
     public static SoundManager sm;
-    public AudioClip addGnomeClip;
-    public AudioClip shootLeftClip;
-    public AudioClip shootRightClip;
-    public AudioClip explosionClip;
-    public AudioClip deathGnomeClip;
-    public AudioClip stingAttackClip;
-    public AudioClip stingDeathClip;
-    public AudioClip levelUpClip;
-    public AudioClip levelDownClip;
-    public AudioClip themeClip;
+    [SerializeField]private AudioClip addGnomeClip;
+    [SerializeField]private AudioClip shootLeftClip;
+    [SerializeField]private AudioClip shootRightClip;
+    [SerializeField]private AudioClip explosionClip;
+    [SerializeField]private AudioClip deathGnomeClip;
+    [SerializeField]private AudioClip stingAttackClip;
+    [SerializeField]private AudioClip stingDeathClip;
+    [SerializeField]private AudioClip levelUpClip;
+    [SerializeField]private AudioClip levelDownClip;
+    [SerializeField]private AudioClip themeClip;
     
     
     // Start is called before the first frame update
