@@ -30,8 +30,6 @@ public class CarrierController : MonoBehaviour
             agent.SetDestination(fallenEnemyPos);
             
         }
-
-        fallenEnemy = GameObject.FindGameObjectWithTag("Fallen Enemy");
     }
 
     private void OnTriggerEnter(Collider other)
