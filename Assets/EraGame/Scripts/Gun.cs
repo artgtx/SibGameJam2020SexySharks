@@ -45,7 +45,8 @@ public class Gun : MonoBehaviour
 
                     GameObject newBullet = Instantiate(BulletPrefab, Spawn.transform.position, Spawn.transform.rotation);
                     newBullet.GetComponent<Rigidbody>().velocity = Spawn.transform.forward * 300;
-                    SoundManager.sm.shootLeft();
+                    SoundManager.sm.shootRight();
+                   
                 }
             }
 
@@ -58,7 +59,7 @@ public class Gun : MonoBehaviour
 
                     GameObject newBullets = Instantiate(BulletPrefab, Spawns.transform.position, Spawns.transform.rotation);
                     newBullets.GetComponent<Rigidbody>().velocity = Spawns.transform.forward * 300;
-                    SoundManager.sm.shootRight();
+                    SoundManager.sm.shootLeft();
                 }
             }
         }
