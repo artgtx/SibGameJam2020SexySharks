@@ -33,7 +33,22 @@ public class PlayerController : MonoBehaviour
         energyFromCarrier = carrier.GetComponent<CarrierController>().energyTaken;
         horizontalInput = Input.GetAxis("Horizontal");
 
-        transform.Translate(Vector3.right * speed * horizontalInput);
+       // print(horizontalInput);
+        if (transform.position.x <= 14.47&&transform.position.x >= -12.14)
+        {
+            transform.Translate(Vector3.right * speed * horizontalInput);
+        }
+        else if(transform.position.x <= -12.14&&horizontalInput<0)
+        {
+            transform.Translate(Vector3.right * speed * horizontalInput);
+        }
+        else if(transform.position.x >= 14.47&&horizontalInput>0)
+        {
+            transform.Translate(Vector3.right * speed * horizontalInput);
+        }
+       
+
+        
 
         if(energyFromCarrier > 0)
         {
