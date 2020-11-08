@@ -414,6 +414,11 @@ PrefabInstance:
       propertyPath: energyText
       value: 
       objectReference: {fileID: 2102762568}
+    - target: {fileID: 2646740989126357705, guid: 838f7906c0bc3814d8f5e1edb12f1730,
+        type: 3}
+      propertyPath: UIHP
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3442747367956666547, guid: 838f7906c0bc3814d8f5e1edb12f1730,
         type: 3}
       propertyPath: m_Name
@@ -1449,6 +1454,25 @@ NavMeshAgent:
   m_BaseOffset: 1.110223e-16
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!1 &1207592279 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3442747367956666547, guid: 838f7906c0bc3814d8f5e1edb12f1730,
+    type: 3}
+  m_PrefabInstance: {fileID: 190215886}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1207592280
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1207592279}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1, y: 0.1, z: 0.1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1292801580 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4473074584413294651, guid: 838f7906c0bc3814d8f5e1edb12f1730,

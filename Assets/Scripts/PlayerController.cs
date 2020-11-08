@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -46,8 +47,6 @@ public class PlayerController : MonoBehaviour
         {
             transform.Translate(Vector3.right * speed * horizontalInput);
         }
-       
-
         
 
         if(energyFromCarrier > 0)
@@ -71,6 +70,11 @@ public class PlayerController : MonoBehaviour
     {
 
         energyText.text = "Energy: " + Mathf.Round(energy);
+    }
+    
+    void OnTriggerEnter(Collider other)
+    {
+        SceneManager.LoadScene(1);
     }
 }
 
