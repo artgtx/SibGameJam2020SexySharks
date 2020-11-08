@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Fallen Enemy
+  - Carrier
   layers:
   - Default
   - TransparentFX

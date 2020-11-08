@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
@@ -13,18 +14,23 @@ public class PlayerController : MonoBehaviour
     private float gunCostLaser;
     private float gunCostPlasma;
 
+    private GameObject carrier;
+    public TextMeshProUGUI energyText;
+
 
     // Start is called before the first frame update
     void Start()
     {
         gunCostLaser = GetComponent<Gun>().energyCostLaser;
         gunCostPlasma = GetComponent<Gun>().energyCostPlasma;
+        carrier = GameObject.FindGameObjectWithTag("Carrier");
+        energyText.text = "Energey: " + energyVault;
     }
 
     // Update is called once per frame
     void Update()
     {
-        energyFromCarrier = GameObject.FindGameObjectWithTag("Carrier").GetComponent<CarrierController>().energyTaken;
+        energyFromCarrier = carrier.GetComponent<CarrierController>().energyTaken;
         horizontalInput = Input.GetAxis("Horizontal");
 
         transform.Translate(Vector3.right * speed * horizontalInput);
@@ -32,21 +38,24 @@ public class PlayerController : MonoBehaviour
         if(energyFromCarrier > 0)
         {
             energyVault = energyVault + (energyFromCarrier * Time.deltaTime);
-
-            Debug.Log(energyVault);
+            UpdateEnergy(energyVault);
         }
         if(Input.GetMouseButton(0) && energyVault > 30)
-        {
-            Debug.Log("Before shot:" + energyVault);
+        {  
             energyVault -= gunCostLaser;
-            Debug.Log("After shot:" + energyVault);
+            UpdateEnergy(energyVault);
         }
         if (Input.GetMouseButton(1) && energyVault > 90)
         {
-            Debug.Log("Before shot:" + energyVault);
             energyVault -= gunCostPlasma;
-            Debug.Log("After shot:" + energyVault);
+            UpdateEnergy(energyVault);
         }
+    }
+
+    private void UpdateEnergy(float energy)
+    {
+
+        energyText.text = "Energey: " + Mathf.Round(energy);
     }
 }
 
